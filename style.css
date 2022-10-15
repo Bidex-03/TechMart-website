@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merienda+One&family=Stoke:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-orange: #ED7117;
+    --secondary-orange: #C65E13;
+    --tertiary-orange: #9E4B0F;
+    --white: #fff;
+    --black: #000;
+    --stoke: 'Stoke', sans-serif;
+    --merienda: 'Merienda One', cursive;
+    --lato: 'Lato', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--black);
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+}
+
+#logo{
+    font-family: var(--merienda);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img{
+    width: 40px;
+    height: 40px;
+}
+
+#side-link{
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-family: var(--lato);
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.nav-links ul li:nth-child(5){
+    margin-right: 10rem;
+}
+
+.nav-links ul li a{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links ul li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: var(--primary-orange);
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.right-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12rem;
+}
+
+.right-links .asset-icon, .right-links .heart-icon{
+    width: 20px;
+    height: 20px;
+}
+
+.right-links .log-btn{
+    border: 1px solid var(--primary-orange);
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: var(--primary-orange);
+    font-family: var(--lato);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+#navbar .icons{
+    display: none;
+}
+
+
+/* ------------------------- */
+/* Navbar query@768px */
+
+@media screen and (max-width: 768px){
+    #navbar{
+        padding: 18px 30px;
+        position: fixed;
+        width: 100%;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    .nav-links ul li:nth-child(5){
+        margin-right: none;
+        border-bottom: none;
+    }
+
+    #side-link{
+        flex-direction: column;
+    }
+
+    .log-btn{
+        align-self: center;
+        margin-top: 20px;
+    }
+
+    .nav-links ul li{
+        display: block;
+        border-bottom: 1px solid var(--primary-orange);
+        padding: 0;
+    }
+
+    #side-link{
+        position: fixed;
+        background: var(--tertiary-orange);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .nav-links ul li::after{
+        display: none;
+    }
+
+    #navbar .icons{
+        display: block;
+        color: var(--primary-orange);
+        margin: 10px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #nabar .times{
+        color: var(--white);
+    }
+}
