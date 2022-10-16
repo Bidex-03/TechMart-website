@@ -272,6 +272,11 @@ header{
     display: inline-block;
     padding: 5px;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+#header-texts .search-input .search-icon:hover{
+    background: var(--primary-orange);
 }
 
 #header-texts .join-btn{
@@ -285,6 +290,15 @@ header{
     line-height: 29px;
     color: var(--white);
     border-radius: 14px;
+    cursor: pointer;
+}
+
+#header-texts .join-btn a{
+    color: var(--white);
+}
+
+#header-texts .join-btn:hover{
+    background: var(--secondary-orange);
 }
 
 .miniArrow{
