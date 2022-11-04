@@ -11,6 +11,7 @@
     --secondary-orange: #C65E13;
     --tertiary-orange: #9E4B0F;
     --header-background: #FAFAFA;
+    --auctions-bg: #F6F6F6;
     --white: #fff;
     --black: #000;
     --stoke: 'Stoke', serif;
@@ -412,18 +413,54 @@ header{
 /* ----------------------- */
 /* Quick Auctions */
 #auctions{
-    background: var(--white);
-    background: red;
+    background: var(--auctions-bg);
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
     margin: auto;
+    width: 80%;
+    border-radius: 30px;
 }
 
 #auctions .auction-texts{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background: blue;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--lato);
+    color: var(--secondary-orange);
+}
+
+#auctions .auction-texts :nth-child(1) {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+#auctions .auction-texts :nth-child(2) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: underline;
+}
+
+#auctions .auction-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 2px;
+    padding: 10px;
+}
+
+#auctions .auction-images img{
+    width: 10rem;
+    height: 10rem;
+}
+
+/* ----------------------- */
+/* Quick Auctions query@768px */
+@media screen and (max-width: 768px){
+    #auctions{
+        display: none;
+    }
 }
