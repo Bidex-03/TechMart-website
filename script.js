@@ -16,7 +16,7 @@ const containerAuctionImages = document.querySelector(".auction-images");
 let auctions = [
     {
         id: 1,
-        name: "Apple iPhone 12 Pro Max 256GB",
+        name: "Samsung Galaxy S21",
         image: "./Asset/Phone_D.jpg",
         price: "₦1,000,000",
     },
