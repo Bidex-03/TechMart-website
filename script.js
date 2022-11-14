@@ -16,27 +16,27 @@ const containerAuctionImages = document.querySelector(".auction-images");
 let auctions = [
     {
         id: 1,
-        name: "Samsung Galaxy S21",
-        image: "./Asset/Phone_D.jpg",
-        price: "₦1,000,000",
+        name: "6 months old camo prints hi...",
+        image: "./Asset/auction-bag.jpg",
+        price: "₦4500",
     },
     {
         id: 2,
-        name: "Powerbank_D",
-        image: "./Asset/Powerbank_D.jpg",
-        price: "₦30,000",
+        name: "4 months old IPASON latitu...",
+        image: "./Asset/auction-laptop.jpg",
+        price: "₦95,000",
     },
     {
         id: 3,
-        name: "Rice_1",
-        image: "./Asset/Rice_1.jpg",
-        price: "₦28,000",
+        name: "A95 smartphone Helio WPX...",
+        image: "./Asset/auction-iPhone.jpg",
+        price: "₦68,700",
     },
     {
         id: 4,
-        name: "Shirt_1",
-        image: "./Asset/Shirt_1.jpg",
-        price: "₦5,000",
+        name: "Feiyutech SCORP-C camhol...",
+        image: "./Asset/auction-camera.jpg",
+        price: "₦68,700",
     }
 ]
 
