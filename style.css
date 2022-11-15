@@ -411,13 +411,11 @@ header{
 /* ----------------------- */
 /* Quick Auctions */
 #auctions{
-    background: var(--auctions-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
     width: 90%;
-    border-radius: 30px;
+    background: var(--auctions-bg);
+    margin: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 
@@ -432,15 +430,12 @@ header{
 
 #auctions .auction-texts :nth-child(1) {
     font-weight: 600;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 48px;
     color: var(--secondary-orange);
 }
 
 #auctions .auction-texts :nth-child(2) {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
     text-decoration: underline var(--secondary-orange);
 }
 
@@ -518,5 +513,93 @@ header{
         font-size: 14px;
         line-height: 19px;
         margin: 5px 0;
+    }
+}
+
+
+/* ----------------------- */
+/* Categories */
+#categories{
+    width: 90%;
+    background: var(--white);
+    /* background: red; */
+    margin: auto;
+    border-radius: 20px;
+    /* padding: 1rem; */
+}
+
+#categories .category-texts h2{
+    color: var(--primary-orange);
+    margin: auto;
+    text-align: center;
+    font-family: var(--lato);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#categories .category-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    grid-gap: 2rem 2px;
+    padding: 10px;
+}
+
+#categories .category-images .category-image{
+    background: var(--white);
+    offset: 0px, 5px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 15rem;
+    width: 14rem;
+    box-shadow: 4px 5px 8px -5px var(--black);
+    cursor: pointer;
+}
+
+#categories .category-images .category-image img{
+    width: 100%;
+    height: 12rem;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+#categories .category-images .category-image p{
+    font-family: var(--lato);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: left;
+}
+
+/* ----------------------- */
+/* Categories query@768px */
+@media screen and (max-width: 768px){
+    #categories{
+        width: 90%;
+        border-radius: 8px;
+    }
+
+    #categories .category-texts h2{
+        text-align: center;
+        font-size: 20px;
+        line-height: 38px;
+    }
+
+    #categories .category-images{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    #categories .category-images .category-image{
+        height: 16rem;
+        width: 9.5rem;
+    }
+
+    #categories .category-images .category-image p{
+        font-size: 16px;
+        line-height: 19px;
     }
 }
