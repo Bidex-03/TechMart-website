@@ -525,7 +525,7 @@ header{
     /* background: red; */
     margin: auto;
     border-radius: 20px;
-    /* padding: 1rem; */
+    justify-content: space-between;
 }
 
 #categories .category-texts h2{
@@ -574,6 +574,25 @@ header{
     text-align: left;
 }
 
+.see-more{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: left;
+    margin: 1rem 0;
+}
+
+.see-more a{
+    font-family: var(--lato);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary-orange);
+    border: 1px solid var(--primary-orange);
+    border-radius: 8px;
+    padding: 10px;
+}
+
 /* ----------------------- */
 /* Categories query@768px */
 @media screen and (max-width: 768px){
@@ -601,5 +620,172 @@ header{
     #categories .category-images .category-image p{
         font-size: 16px;
         line-height: 19px;
+    }
+}
+
+
+/* ----------------------- */
+/* SEE ALSO */
+#see-also-container{
+    width: 90%;
+    background: var(--auctions-bg);
+    margin: auto;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+#see-also-container .inner-see-also{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--lato);
+    color: var(--secondary-orange);
+}
+
+#see-also-container .inner-see-also .see-texts h2{
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 2px;
+}
+
+#see-also-container .inner-see-also .see-texts p{
+    color: var(--black);
+    font-size: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+#see-also-container .inner-see-also .view-more a{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: var(--secondary-orange);
+    text-decoration: underline var(--secondary-orange);
+}
+
+#see-also-container .see-also-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    grid-gap: 2rem 2px;
+    padding: 10px;
+}
+
+#see-also-container .see-also-image{
+    background: var(--white);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 5px 8px -5px var(--black);
+    cursor: pointer;
+}
+
+#see-also-container .see-also-image img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#see-also-container .see-also-images .see-also-info{
+    font-family: var(--lato);
+    padding: 10px;
+}
+
+#see-also-container .see-also-images .see-also-info h3{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 2px;
+
+    width: 230px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#see-also-container .see-also-images .see-also-info .see-also-paragraphs{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--lato);
+    font-size: 18;
+}
+
+#see-also-container .see-also-paragraphs .old-price{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28.8px;
+}
+
+#see-also-container .see-also-paragraphs .new-price{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28.8px;
+    color: var(--secondary-orange);
+}
+
+/* ------------------------ */
+/* SEE ALSO query@725px */
+@media screen and (max-width: 768px) {
+    #see-also-container{
+        width: 90%;
+        border-radius: 10px;
+    }
+
+    #see-also-container .inner-see-also{
+        padding: .5rem;
+    }
+
+    #see-also-container .inner-see-also .see-texts h2{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16.8px;
+        letter-spacing: 2px;
+    }
+    
+    #see-also-container .inner-see-also .see-texts p{
+        color: var(--black);
+        font-size: 400;
+        font-size: 12px;
+        line-height: 14.4px;
+    }
+
+    #see-also-container .inner-see-also .view-more a{
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 14.4px;
+        color: var(--secondary-orange);
+        text-decoration: underline var(--secondary-orange);
+    }
+
+    #see-also-container .see-also-images{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        grid-gap: 2rem 4px;
+    }
+
+    #see-also-container .see-also-images .see-also-info h3{
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        width: 110px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #see-also-container .see-also-paragraphs .old-price{
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14.4px;
+    }
+    
+    #see-also-container .see-also-paragraphs .new-price{
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 14.4px;
     }
 }

@@ -20,7 +20,7 @@ let auctions = [
         id: 1,
         name: "6 months old camo prints hi...",
         image: "./Asset/auction-bag.jpg",
-        price: "₦4500",
+        price: "₦4,500",
     },
     {
         id: 2,
@@ -134,3 +134,61 @@ const displayCategories = (categories) => {
     
 }
 displayCategories(categories);
+
+
+/////////////////////////////////
+// SEE ALSO
+const containerSeeAlso = document.querySelector("#see-also");
+const containerSeeAlsoImages = document.querySelector(".see-also-images");
+
+let seeAlsos = [
+    {
+        id: 1,
+        name: "Ultralight-weight-waterproo..",
+        image: "./Asset/waterproof-bag.jpg",
+        oldPrice: "₦4,500",
+        newPrice: "₦3,900",
+    },
+    {
+        id: 2,
+        name: "60mm-Scope-magnifier-for...",
+        image: "./Asset/scope-magnifier.jpg",
+        oldPrice: "₦5,000",
+        newPrice: "₦3,800",
+    },
+    {
+        id: 3,
+        name: "Brown leather shoe for men...",
+        image: "./Asset/brown-shoe.jpg",
+        oldPrice: "₦5,500",
+        newPrice: "₦3,900",
+    },
+    {
+        id: 4,
+        name: "2022 Cosmetic case for wo...",
+        image: "./Asset/cosmetic-case.jpg",
+        oldPrice: "₦6,500",
+        newPrice: "₦4,900",
+    }
+]
+
+const displaySeeAlso = (seeAlsos) => {
+    containerSeeAlsoImages.innerHTML = "";
+
+    seeAlsos.forEach(function (seeAlso) {
+        const seeAlsoImage = document.createElement("div");
+        seeAlsoImage.classList.add("see-also-image");
+        seeAlsoImage.innerHTML = `
+            <a href="#"><img src="${seeAlso.image}" alt="${seeAlso.name}">
+            <div class="see-also-info">
+                <h3>${seeAlso.name}</h3>
+                <div class="see-also-paragraphs">
+                    <p class="old-price"><del>${seeAlso.oldPrice}</del></p>
+                    <p class="new-price">${seeAlso.newPrice}</p>
+                </div>
+            </div></a>
+        `;
+        containerSeeAlsoImages.appendChild(seeAlsoImage);
+    });
+}
+displaySeeAlso(seeAlsos);
