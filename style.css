@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Merienda+One&family=Stoke:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Merienda+One&family=Source+Serif+4:opsz,wght@8..60,200;8..60,300;8..60,400;8..60,500;8..60,600;8..60,700;8..60,800;8..60,900&family=Stoke:wght@300;400&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +16,8 @@
     --stoke: 'Stoke', serif;
     --merienda: 'Merienda One', cursive;
     --lato: 'Lato', sans-serif;
+    --source-serif: 'Source Serif 4', serif;
+    --inter: 'Inter', sans-serif;
 }
 
 a{
@@ -38,7 +39,7 @@ header{
     padding: 2rem 5rem;
 }
 
-#logo{
+#logo a{
     font-family: var(--merienda);
     font-style: normal;
     font-weight: 400;
@@ -48,7 +49,7 @@ header{
     align-items: center;
 }
 
-#logo img{
+#logo a img{
     width: 40px;
     height: 40px;
 }
@@ -631,7 +632,7 @@ header{
     background: var(--auctions-bg);
     margin: auto;
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 3rem;
 }
 
 
@@ -727,7 +728,7 @@ header{
 }
 
 /* ------------------------ */
-/* SEE ALSO query@725px */
+/* SEE ALSO query@768px */
 @media screen and (max-width: 768px) {
     #see-also-container{
         width: 90%;
@@ -787,5 +788,226 @@ header{
         font-weight: 800;
         font-size: 12px;
         line-height: 14.4px;
+    }
+}
+
+
+/* ---------------------- */
+/* GIVEAWAY */
+.container{
+    display: none;
+    padding: 3rem;
+    background-color: var(--white);
+}
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    position: relative;
+    width: 50%;
+    height: 200px;
+    background-color: var(--secondary-orange);
+    border-radius: 10px 10px 0px 10px;
+}
+
+.first-column{
+    position: absolute;
+    color: var(--white);
+    padding: 1rem;
+}
+
+.first-column h3{
+    font-size: var(--fs-large);
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.first-column .text{
+    font-size: var(--fs-small);
+    margin-bottom: 0.8rem;
+}
+
+.first-column-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.first-column-content img{
+    width: 70px;
+}
+
+.second-column img{
+    position: absolute;
+    margin-right: -55px;
+    top: -80px;
+    right: -0;
+    width: 70%;
+}
+
+.link{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+/* --------------------- */
+/* FOOTER */
+#footer{
+    background: var(--secondary-orange);
+    width: 100%;
+    color: var(--white);
+    padding: 2rem 0px;
+    margin: auto;
+}
+
+#footer-center{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo-div{
+    width: 26%;
+}
+
+#logo-div #logo{
+    margin-bottom: 2.5rem;
+}
+
+#logo-div .logo-info{
+    font-family: var(--lato);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#footer-center #TechMart-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 10rem);
+}
+
+#footer-center #TechMart-grid h2{
+    font-family: var(--lato);
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#footer-center #TechMart-grid .footer-links > *{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--white);
+    font-family: var(--inter);
+}
+
+
+/* ------------------ */
+/* Footer query@725px */
+@media screen and (max-width: 725px){
+    #footer-center{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    #logo-div{
+        width: 100%;
+        margin-bottom: 5rem;
+        /* text-align: center; */
+    }
+
+    #logo-div #logo{
+        margin-bottom: 10px;
+    }
+
+    #footer-center #TechMart-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer-center #TechMart-grid > *{
+        margin-bottom: 2rem;
+    }
+
+    #footer-center #TechMart-grid .footer-links > *{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        color: var(--white);
+        font-family: var(--inter);
+    }
+}
+
+
+/* ------------------ */
+/* Sub-Footer */
+#sub-footer{
+    background: var(--tertiary-orange);
+    width: 100%;
+    color: var(--white);
+    padding: 1rem 0px;
+    margin: auto;
+}
+
+#sub-footer-center{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    color: var(--white);
+    font-family: var(--lato);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#sub-footer-center .sub-footer-right{
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+}
+
+#sub-footer-center .sub-footer-right > *{
+    color: var(--white);
+}
+
+#credit .heart{
+    color: red;
+}
+
+#credit a{
+    color: var(--white);
+    font-weight: var(--lato);
+}
+
+/* ------------------ */
+/* Sub-Footer query@725px */
+@media screen and (max-width: 768px){
+    #sub-footer-center{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: left;
+        padding: 1rem;
+    }
+
+    #sub-footer-center .sub-footer-right{
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        width: 30%;
     }
 }
